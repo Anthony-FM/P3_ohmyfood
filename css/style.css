@@ -60,7 +60,8 @@ body {
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 599px;
+  max-width: 599px;
+  width: 100%;
 }
 
 body {
