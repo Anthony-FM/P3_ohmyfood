@@ -5,3 +5,14 @@ body{
     max-width: 599px;
     width: 100%;
 }
+
+.container {
+    padding: $padding-global;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 24px;
+}
