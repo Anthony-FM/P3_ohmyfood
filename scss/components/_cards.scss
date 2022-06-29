@@ -7,6 +7,7 @@
     border-radius: 20px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
     box-shadow: 0px 5px 5px 5px $color-txt-light;
     &__img {
         width: 100%;

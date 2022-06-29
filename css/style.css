@@ -183,6 +183,7 @@ h2, h3 {
   border-radius: 20px;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
   box-shadow: 0px 5px 5px 5px #353535;
 }
 .cards__img {
