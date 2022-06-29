@@ -1,0 +1,41 @@
+.ftnt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 268px;
+    margin-bottom: 69px;
+    &__bloc{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 87%;
+        height: 74px;
+        background-color: $color-fond;
+        border-radius: 25px;
+        position: relative;
+        margin-left: 11px;
+        padding-left: 32px;
+        & .number{
+            width: 23px;
+            height: 23px;
+            background-color: $color-primary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: -11px;
+            border-radius: 50%;
+            color: $color-white;
+        }
+
+        & p:nth-child(2){
+            margin-right: 20px;
+            color: $color-fond;
+        }
+
+        & p{
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}
