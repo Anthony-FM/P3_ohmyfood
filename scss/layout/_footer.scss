@@ -1,0 +1,47 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: $color-txt-light;
+    width: 100%;
+    padding: $padding-global;
+    &__logo {
+        width: 100px;
+        height: 16px;
+        margin: 26px 0 23px;
+        font-size: 20px;
+        color: $color-white;
+        
+    }
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 37px;
+    &__li{
+        font-size: 17px;
+        color: $color-white;
+        margin-bottom: 13px;
+        & a{
+            display: flex;
+            position: relative;
+            text-decoration: none;
+            color: $color-white;
+        }
+        & i{
+            padding-right: 5px;
+            position: absolute;    
+            & :nth-child(3) {
+                transform: rotate(130deg);
+                left: -6px;
+            }       
+        }
+        & p{
+            margin-left: 25px;
+        }
+        
+    }
+        
+}
