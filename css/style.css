@@ -147,6 +147,7 @@ h2, h3 {
   position: relative;
   text-decoration: none;
   color: #fff;
+  cursor: pointer;
 }
 .footer-list__li i {
   padding-right: 5px;
