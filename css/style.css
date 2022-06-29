@@ -318,6 +318,7 @@ h2, h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 0 20px;
 }
 .fonctionnement__title {
   margin: 53px 0;
