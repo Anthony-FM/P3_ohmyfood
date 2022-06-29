@@ -41,3 +41,15 @@
         margin: 53px 0;
     }
 }
+
+.cartes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 64px;
+    background-color: $color-fond;
+    padding: $padding-global;
+    &__title {
+        margin-bottom: 28px;
+    }
+}
