@@ -34,9 +34,9 @@
         & i{
             padding-right: 5px;
             position: absolute;    
-            & :nth-child(3) {
-                transform: rotate(130deg);
-                left: -6px;
+            &.fa-handshake-simple {
+                display: inline-block;
+                transform: rotate(-45deg);
             }       
         }
         & p{
