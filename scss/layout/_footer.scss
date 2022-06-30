@@ -4,13 +4,13 @@
     justify-content: flex-start;
     align-items: flex-start;
     background-color: $color-txt-light;
-    width: 100%;
     padding: $padding-global;
     &__logo {
         width: 100px;
         height: 16px;
         margin: 26px 0 23px;
         font-size: 20px;
+        font-family: 'Shrikhand', cursive;
         color: $color-white;
         
     }
