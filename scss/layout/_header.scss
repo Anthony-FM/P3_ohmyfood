@@ -2,16 +2,26 @@
     display: flex;    
     justify-content: center;
     align-items: center;
-    height: $header-height;
+    height: nth($header-height,1);
     position: relative;
+    @include tablette {
+        height: nth($header-height,2);
+    }
+    @include desktop{
+        height: nth($header-height,3);
+    }
 
     &__logo {
-        width: 161px;
-        height: 27px;
         display: flex;
         justify-content: center;
-        font-size: 30px;
+        font-size: nth($header-logo,1);;
         font-family: 'Shrikhand', cursive;
+        @include tablette {
+            font-size: nth($header-logo,2);
+        }
+        @include desktop{
+            font-size: nth($header-logo,3);
+        }
           
     }
     &__arrow{        
