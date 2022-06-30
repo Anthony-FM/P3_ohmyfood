@@ -4,6 +4,7 @@
     justify-content: space-between;
     height: 268px;
     margin-bottom: 69px;
+    
     &__bloc{
         display: flex;
         justify-content: flex-start;
@@ -15,6 +16,16 @@
         position: relative;
         margin-left: 11px;
         padding-left: 32px;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        &:nth-child(3){
+            background: #f5edff;
+            & p:nth-child(2){
+                color: $color-primary;
+            }
+            
+            
+            
+        }
         & .number{
             width: 23px;
             height: 23px;
@@ -30,12 +41,12 @@
 
         & p:nth-child(2){
             margin-right: 20px;
-            color: $color-fond;
+            color: $color-txt-light;
         }
 
         & p{
             font-size: 16px;
             font-weight: 500;
-        }
+        }        
     }
 }
