@@ -123,6 +123,7 @@ h2, h3 {
   font-size: 20px;
   font-family: "Shrikhand", cursive;
   color: #fff;
+  font-weight: lighter;
 }
 
 .footer-list {
@@ -278,7 +279,7 @@ h2, h3 {
   justify-content: center;
   align-items: center;
   background-color: #99E2D0;
-  color: darken #99E2D0, 20%;
+  color: #008766;
   position: absolute;
   right: 10px;
   top: 12px;
