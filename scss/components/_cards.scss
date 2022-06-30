@@ -46,9 +46,9 @@
             &:hover p:nth-child(1){        
                 cursor: pointer;
                 display: block;
-                background-image: linear-gradient(to bottom left, $color-primary, $color-secondary);
-                background-clip: text;
-                color: transparent;                
+                background-image: linear-gradient(to bottom left, $color-primary, $color-secondary); //création d'un background color dans tout le bloc p                
+                color: transparent;  // mise en transparence du texte
+                background-clip: text; // création d'un masque d'écrétage, la couleur remplacera le texte transparent     
             }
             &:hover p:nth-child(2){
                 display: none;                   
