@@ -10,6 +10,11 @@ $color-black: #000;
 $color-txt-news: #008766;
 
 /*Taille*/
-$header-height: 63px, 80px, 90px;
 $padding-global: 0 20px;
+$header-height: 63px, 80px, 90px;
 $header-logo: 30px, 34px, 40px;
+$footer-logo: 20px, 30px;
+$footer-logo-padding:(
+    mobile: 26px 0 23px,
+    tab: 26px 0 40px,
+);

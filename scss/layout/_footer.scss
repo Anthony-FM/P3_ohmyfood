@@ -5,14 +5,22 @@
     align-items: flex-start;
     background-color: $color-txt-light;
     padding: $padding-global;
+    @include tablette {
+        align-items: center;
+    }
+    
     &__logo {
         width: 100px;
         height: 16px;
-        margin: 26px 0 23px;
+        margin: map-get($footer-logo-padding, mobile);
         font-size: 20px;
         font-family: 'Shrikhand', cursive;
         color: $color-white;
         font-weight: lighter;
+        @include tablette {
+            font-size: 30px;
+            margin: map-get($footer-logo-padding, tab);
+        }
         
     }
 }
