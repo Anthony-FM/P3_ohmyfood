@@ -100,6 +100,7 @@ body {
 h1 {
   font-weight: 600;
   font-size: 24px;
+  font-family: "Shrikhand", cursive;
 }
 
 h2, h3 {
@@ -263,8 +264,6 @@ h2, h3 {
 .menu {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
   width: 100%;
   margin-bottom: 20px;
 }
@@ -491,9 +490,10 @@ h2, h3 {
   flex-direction: column;
   align-items: center;
 }
-.resa__txt h1 {
+.resa__txt h2 {
   text-align: center;
   width: 62.2%;
+  font-size: 24px;
 }
 .resa__txt p {
   font-size: 18px;
@@ -516,6 +516,7 @@ h2, h3 {
 }
 .fonctionnement__title {
   margin: 53px 0;
+  font-size: 24px;
 }
 
 .cartes {
@@ -533,6 +534,7 @@ h2, h3 {
 }
 .cartes__title {
   margin: 56px 0 28px;
+  font-size: 24px;
 }
 .cartes__container {
   display: flex;
@@ -590,7 +592,6 @@ h2, h3 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
   }
 }
 @media screen and (min-width: 992px) {
