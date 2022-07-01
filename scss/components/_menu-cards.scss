@@ -4,6 +4,13 @@
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
+    margin-bottom: 20px;
+    @include tablette{
+        width: 48%;
+    }
+    @include desktop{
+        width: 32%;
+    }
     &__title {
         font-size: 18px;
         font-weight: 300;
@@ -25,12 +32,17 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        max-width: 300px;
         height: 80px;
         background-color: $color-white;
         border-radius: 15px;
         padding-left: 10px;
         margin-bottom: 11px;
         box-shadow: $shadow;
+        @include tablette{
+            width: 100%;
+        }
+        
         &:hover .card-check__check{
             display: block;
             cursor: pointer;
