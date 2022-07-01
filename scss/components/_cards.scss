@@ -8,8 +8,11 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: $shadow;
     margin-bottom: 17px;
+    @include tablette {
+        width: 49%;
+    }
     &__img {
         width: 100%;
         height: 173px;
@@ -26,33 +29,6 @@
         padding: 0 24px 20px 11px;
         & p {
             margin-top: 10px;
-        }
-
-        & .hearts {
-            font-size: 25px;
-            color: $color-black; 
-            position: relative; 
-            & p {
-                position: absolute;
-                right: 5px;
-                top: -10px;
-                &:nth-child(1){
-                    z-index: 1;
-                    display: none;
-                    
-                }
-                
-            } 
-            &:hover p:nth-child(1){        
-                cursor: pointer;
-                display: block;
-                background-image: linear-gradient(to bottom left, $color-primary, $color-secondary); //création d'un background color dans tout le bloc p                
-                color: transparent;  // mise en transparence du texte
-                background-clip: text; // création d'un masque d'écrétage, la couleur remplacera le texte transparent     
-            }
-            &:hover p:nth-child(2){
-                display: none;                   
-            }
         }
     }
 }
