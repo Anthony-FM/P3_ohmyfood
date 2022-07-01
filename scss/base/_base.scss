@@ -21,14 +21,13 @@ body{
         justify-content: space-between;
         align-items: center;
         height: 1200px;
+        @include tablette{
+            height: max-content;
+        }
+        
     }
     &--gris{
         background-color: $color-fond;
     }
     
-}
-
-h1 {
-    font-weight: 600;
-    font-size: 24px;
 }
