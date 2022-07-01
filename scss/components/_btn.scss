@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 3px 10px $color-txt-light;
+    box-shadow: $shadow;
     font-weight: 500;
     cursor: pointer;
 }
