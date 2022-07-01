@@ -2,30 +2,35 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     height: 268px;
     margin-bottom: 69px;
+    @include tablette{
+        height: 305px;
+    }
     
     &__bloc{
         display: flex;
         justify-content: flex-start;
         align-items: center;
         width: 87%;
+        max-width: 400px;
         height: 74px;
         background-color: $color-fond;
         border-radius: 25px;
         position: relative;
         margin-left: 11px;
         padding-left: 32px;
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        box-shadow: $shadow;
+        @include tablette{
+            width: 300px;
+            height: 85px;
+        }
         &:nth-child(3){
             background: #f5edff;
             & p:nth-child(2){
                 color: $color-primary;
-            }
-            
-            
-            
-        }
+            }    
         & .number{
             width: 23px;
             height: 23px;
@@ -37,6 +42,10 @@
             left: -11px;
             border-radius: 50%;
             color: $color-white;
+            @include tablette{
+                width: 30px;
+                height: 30px;
+            }
         }
 
         & p:nth-child(2){
@@ -47,6 +56,9 @@
         & p{
             font-size: 16px;
             font-weight: 500;
+            @include tablette{
+                font-size: 20px;
+            }
         }        
     }
 }
