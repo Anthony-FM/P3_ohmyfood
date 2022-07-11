@@ -8,6 +8,12 @@
     justify-content: center;
     align-items: center;
     box-shadow: $shadow;
-    font-weight: 500;
-    cursor: pointer;
+    font-weight: 500;       
+    transition: all 200ms;
+    &:hover {
+        cursor: pointer;
+        filter: brightness(1.05);      
+        box-shadow: $dark-shadow;
+    }
+
 }
