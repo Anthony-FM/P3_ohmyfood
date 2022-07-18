@@ -12,6 +12,19 @@
         & i{
             padding-right: 5px;
         }
+
+        & input{
+            border: none;
+            background-color: $color-localisation;
+            font-size: 1em;
+            font-weight: bolder;
+            text-align: center;
+            margin: auto 10px;
+            &:focus{
+                outline: none;
+                background-color: $color-localisation;
+            }
+        }
     }
     &__txt{
         padding: $padding-global;
