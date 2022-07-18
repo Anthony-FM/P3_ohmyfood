@@ -30,8 +30,11 @@
         left: 5%;
         width: 18px;
         height: 16px;
+        transform: translate(0) scale(1);
+        transition: transform 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
         &:hover{
             cursor: pointer;
+            transform: translateX(-10px) scaleX(1.3);
         }
     }
 }
