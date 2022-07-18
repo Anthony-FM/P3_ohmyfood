@@ -23,16 +23,60 @@
         padding-left: 32px;
         padding-right: 20px;
         box-shadow: $shadow;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        &::after{
+            content: '';
+            position: absolute;
+            z-index: -1;
+            border-radius: 25px;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: $color-ftnt-fond;
+            opacity: 0;
+            transition: opacity 300ms;
+        }  
         @include tablette{
             width: 350px;
             height: 85px;
         }
-        &:nth-child(3){
-            background: #f5edff;
+        &:hover{
+            &::after{
+                opacity: 1;
+            }            
             & p:nth-child(2){
                 color: $color-primary;
+                // &::after{
+                //     opacity: 1;
+                // }
+                
             } 
-        }    
+        }   
+        
+        & p:nth-child(2){
+            margin-right: 20px;
+            position: relative;
+            z-index: 1;
+            color: $color-txt-light;
+            // &::after{
+            //     content: '';
+            //     position: absolute;
+            //     color: $color-primary;
+            //     background: $color-primary;
+            //     z-index: -1;
+            //     top: 0;
+            //     bottom: 0;
+            //     right: 0;
+            //     left: 0;            
+            //     opacity: 0;
+            //     transition: opacity 300ms;               
+                
+            // }            
+        }
+
         & .number{
             width: 23px;
             height: 23px;
@@ -48,11 +92,6 @@
                 width: 30px;
                 height: 30px;
             }
-        }
-
-        & p:nth-child(2){
-            margin-right: 20px;
-            color: $color-txt-light;
         }
 
         & p{
