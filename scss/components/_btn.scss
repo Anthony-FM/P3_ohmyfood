@@ -1,19 +1,57 @@
 .btn {
     width: 218px;
     height: 50px;
-    background: linear-gradient(to top left, $color-primary, $color-secondary);
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to top left, $color-primary, $color-secondary 270%);
     border-radius: 23px;
     color: $color-white;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: $shadow;
+    cursor: pointer;
     font-weight: 500;       
-    transition: all 200ms;
+    transition: all 200ms ease-out;
+    
     &:hover {
-        cursor: pointer;
-        filter: brightness(1.05);      
+        // filter: brightness(1.15);      
+        &::after {
+            opacity: 1;
+        }
+        &::before {
+            opacity: 0.1;
+        }
+
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $color-white; 
+        width: 218px;
+        height: 50px;
+        border-radius: 23px;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         box-shadow: $dark-shadow;
+        border-radius: 23px;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
     }
 
 }
