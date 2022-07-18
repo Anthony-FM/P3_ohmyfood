@@ -27,14 +27,9 @@
         position: relative;
         z-index: 1;
         &::after{
-            content: '';
-            position: absolute;
+            @include after;            
             z-index: -1;
-            border-radius: 25px;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
+            border-radius: 25px;            
             background-color: $color-ftnt-fond;
             opacity: 0;
             transition: opacity 300ms;
@@ -62,15 +57,10 @@
             z-index: 1;
             color: $color-txt-light;
             // &::after{
-            //     content: '';
-            //     position: absolute;
+                // @include after;
             //     color: $color-primary;
             //     background: $color-primary;
-            //     z-index: -1;
-            //     top: 0;
-            //     bottom: 0;
-            //     right: 0;
-            //     left: 0;            
+            //     z-index: -1;       
             //     opacity: 0;
             //     transition: opacity 300ms;               
                 
