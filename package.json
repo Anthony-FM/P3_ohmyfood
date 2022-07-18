@@ -4,7 +4,8 @@
   "description": "Projet 3 ohmyfood",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./scss/main.scss:./css/style.css"
+    "sass": "sass --watch ./scss/main.scss:./css/style.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -12,8 +13,10 @@
   },
   "author": "Anthony Fouda Many",
   "license": "ISC",
+  
   "bugs": {
     "url": "https://github.com/Anthony-FM/P3_ohmyfood/issues"
   },
-  "homepage": "https://github.com/Anthony-FM/P3_ohmyfood#readme"
+  "homepage": "https://github.com/Anthony-FM/P3_ohmyfood#readme",
+  "browserslist": "last 4 versions"
 }
