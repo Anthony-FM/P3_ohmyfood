@@ -26,21 +26,20 @@
     @include tablette{        
         max-width: 80%;
     }    
-    @include desktop {
-        max-width: 90%;
-    }
+    
 }
 
 .menu-container{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     @include tablette {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
-    }
-    @include desktop {
         justify-content: space-between;
+        width: 100%;
+    }
+    @include desktop {        
         width: 90%;
     }
 }
