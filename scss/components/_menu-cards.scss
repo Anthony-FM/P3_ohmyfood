@@ -30,7 +30,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 300px;
+        width: 300px;
         height: 80px;
         background-color: $color-white;
         border-radius: 15px;
@@ -79,8 +79,7 @@
             font-size: 1.5rem;
             transform: rotate(-180deg);
             transition: transform 400ms cubic-bezier(.56,.41,.5,1) 200ms;
-        }        
-           
+        }      
     }
 }
 
@@ -119,7 +118,6 @@
         @include desktop {
             font-size: 13px;
         }
-        
     }
 }
 
