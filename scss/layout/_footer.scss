@@ -42,25 +42,24 @@
             text-decoration: none;
             color: $color-white;
             cursor: pointer;
-            transition: color 200ms ease-in;
-            
+            transition: color 200ms;
+            transform-origin: left;
+            &:hover:not(i){
+                color: $color-primary;
+            }
         }
-        &:hover a{
-            color: $color-primary;
-        }
+
         & i{
             padding-right: 5px;
             position: absolute;    
             &.fa-handshake-simple {
                 display: inline-block;
                 transform: rotate(-45deg);
-            }       
+            }
+                  
         }
         & p{
             margin-left: 25px;
         }
-        
-        
-    }
-        
+    } 
 }
