@@ -13,8 +13,8 @@
 
     &__load{
         position: absolute;
-        top: 50px;
-        left: 55px;
+        top: 50%;
+        left: 10%;
         display: flex;
         justify-content: center;
         align-items: center; 
@@ -22,7 +22,6 @@
         &:hover > .load {
             transform: rotate(100turn);
             opacity: 1;
-            
         } 
         &:active > .arrow{
             transform: translate(-2px) scale(1.05);
@@ -53,8 +52,6 @@
             transform: translate(-2px) scale(1.05);   
         }        
     }
-    
-    
 
     &__logo {
         display: flex;
@@ -67,8 +64,5 @@
         @include desktop{
             font-size: nth($header-logo,3);
         }
-          
     }
-    
-    
 }
