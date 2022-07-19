@@ -1,26 +1,39 @@
 .hearts {
     font-size: 25px;
-    color: $color-black; 
     position: relative; 
-    & p {
+    cursor: pointer;
+
+    & p:nth-child(1){
         position: absolute;
-        right: 5px;
-        top: -10px;
-        &:nth-child(1){
-            z-index: 1;
-            display: none;
-            
-        }
+        opacity: 1;
+        transition: opacity 400ms;
+        z-index: 1;
+
+    }
+
+    & p:nth-child(2) {
+        position: absolute; 
+        display: block;
+        background: linear-gradient(to bottom left, transparent 0%, $color-primary 5%, $color-secondary); //création d'un background color dans tout le bloc p                
+        color: transparent;  // mise en transparence du texte
+        -webkit-background-clip: text; // création d'un masque d'écrétage, la couleur remplacera le texte transparent    
+        transform-origin: bottom;
+        background-position-y: 100%; 
+        background-size: 100% 200%;
+        background-origin:  0px;
+        opacity: 0;
+        transform: scale(1, 0);
+        transition: scale 400ms, opacity 400ms ease-in-out;
+        z-index: 0;
         
     } 
-    &:hover p:nth-child(1){        
-        cursor: pointer;
-        display: block;
-        background-image: linear-gradient(to bottom left, $color-primary, $color-secondary); //création d'un background color dans tout le bloc p                
-        color: transparent;  // mise en transparence du texte
-        background-clip: text; // création d'un masque d'écrétage, la couleur remplacera le texte transparent     
-    }
-    &:hover p:nth-child(2){
-        display: none;                   
-    }
+    &:hover{
+        & > p:nth-child(2){        
+            opacity: 1;
+            transform: scaleY(1);         
+        }
+        & > p:nth-child(1){        
+            opacity: 0;         
+        }
+    }  
 }
