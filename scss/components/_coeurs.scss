@@ -1,13 +1,18 @@
 .hearts {
-    font-size: 25px;
-    position: relative; 
+    position: relative;
     cursor: pointer;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
 
     & p:nth-child(1){
         position: absolute;
         opacity: 1;
         transition: opacity 400ms;
         z-index: 1;
+        font-size: 25px;
 
     }
 
@@ -25,6 +30,7 @@
         transform: scale(1, 0);
         transition: scale 400ms, opacity 400ms ease-in-out;
         z-index: 0;
+        font-size: 25px;
         
     } 
     &:hover{
