@@ -448,7 +448,7 @@ h2, h3 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 24px 20px 11px;
+  padding: 0 64px 20px 11px;
 }
 .cards__txt p {
   margin-top: 10px;

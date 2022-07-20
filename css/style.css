@@ -87,7 +87,6 @@ a {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 1200px;
 }
 @media screen and (min-width: 768px) {
   .container__menu {
@@ -103,7 +102,6 @@ body {
 }
 
 h1 {
-  font-weight: 600;
   font-size: 24px;
   font-family: "Shrikhand", cursive;
 }
@@ -150,24 +148,23 @@ h2, h3 {
   position: absolute;
   left: -16px;
   color: #99E2D0;
-  font-size: 26px;
+  font-size: 32px;
   z-index: 2;
   opacity: 0;
   transform-origin: center center;
   transform: rotate(0);
-  transition: transform 1000ms ease-in-out, opacity 300ms ease-in-out;
+  transition: transform 2000ms ease-in-out, opacity 300ms ease-in-out;
 }
 .header .arrow {
   position: absolute;
-  width: 18px;
-  height: 16px;
+  font-size: 20px;
   transform: translate(0) scale(1);
-  transition: transform 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 100ms cubic-bezier(0.075, 0.82, 0.165, 1);
   z-index: 1;
   cursor: pointer;
 }
 .header .arrow:active {
-  transform: translate(-2px) scale(1.05);
+  transform: translate(-10px) scale(1.12);
 }
 .header__logo {
   display: flex;
@@ -249,7 +246,7 @@ h2, h3 {
   display: inline-block;
   transform: rotate(-45deg);
 }
-.footer-list__li p {
+.footer-list__li i + p {
   margin-left: 25px;
 }
 
@@ -335,11 +332,19 @@ h2, h3 {
 .cards__txt {
   display: flex;
   justify-content: space-between;
-  padding: 0 64px 20px 11px;
+  padding: 0 24px 20px 11px;
 }
 .cards__txt p {
   margin-top: 10px;
   font-weight: lighter;
+  font-size: 14px;
+}
+.cards__txt h2 {
+  font-size: 16px;
+}
+
+.cards-bloc {
+  margin-top: 15px;
 }
 
 .menu {
@@ -484,19 +489,19 @@ h2, h3 {
   justify-content: space-between;
   align-items: center;
   height: 268px;
-  margin-bottom: 69px;
+  margin: 0 5% 69px 0;
 }
 @media screen and (min-width: 768px) {
   .ftnt {
     height: 305px;
+    margin-right: inherit;
   }
 }
 .ftnt__bloc {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 87%;
-  max-width: 400px;
+  width: 320px;
   height: 74px;
   background-color: #F6F6F6;
   border-radius: 25px;
@@ -549,8 +554,8 @@ h2, h3 {
   transition: opacity 300ms;
 }
 .ftnt__bloc .number {
-  width: 23px;
-  height: 23px;
+  width: 26px;
+  height: 26px;
   background-color: #9356DC;
   display: flex;
   justify-content: center;
@@ -592,15 +597,20 @@ h2, h3 {
 }
 
 .hearts {
-  font-size: 25px;
   position: relative;
   cursor: pointer;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
 }
 .hearts p:nth-child(1) {
   position: absolute;
   opacity: 1;
   transition: opacity 400ms;
   z-index: 1;
+  font-size: 25px;
 }
 .hearts p:nth-child(2) {
   position: absolute;
@@ -616,6 +626,7 @@ h2, h3 {
   transform: scale(1, 0);
   transition: scale 400ms, opacity 400ms ease-in-out;
   z-index: 0;
+  font-size: 25px;
 }
 .hearts:hover > p:nth-child(2) {
   opacity: 1;
@@ -662,12 +673,11 @@ h2, h3 {
 }
 .resa__txt h2 {
   text-align: center;
-  width: 62.2%;
+  width: 82%;
   font-size: 24px;
 }
 .resa__txt p {
   font-size: 18px;
-  width: 82.2%;
   text-align: center;
   margin: 20px 0;
   font-weight: lighter;
@@ -738,6 +748,7 @@ h2, h3 {
 .bloc {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   max-width: 300px;
   margin-bottom: 37px;
