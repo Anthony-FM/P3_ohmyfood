@@ -4,17 +4,17 @@
     justify-content: space-between;
     align-items: center;
     height: 268px;
-    margin-bottom: 69px;
+    margin: 0 5% 69px 0;
     @include tablette{
         height: 305px;
+        margin-right: inherit;
     }
     
     &__bloc{
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        width: 87%;
-        max-width: 400px;
+        width: 320px;
         height: 74px;
         background-color: $color-fond;
         border-radius: 25px;
@@ -65,8 +65,8 @@
         }
 
         & .number{
-            width: 23px;
-            height: 23px;
+            width: 26px;
+            height: 26px;
             background-color: $color-primary;
             display: flex;
             justify-content: center;
