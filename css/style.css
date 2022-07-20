@@ -252,8 +252,8 @@ h2, h3 {
 
 .loader {
   position: fixed;
-  width: 100%;
-  height: 115%;
+  width: 100vw;
+  height: 115vh;
   border-radius: 0 0 100px 100px;
   background-color: #9356dc;
   opacity: 0;
