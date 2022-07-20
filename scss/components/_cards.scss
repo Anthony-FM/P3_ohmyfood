@@ -26,10 +26,19 @@
     &__txt{
         display: flex;
         justify-content: space-between;
-        padding: 0 64px 20px 11px;
+        padding: 0 24px 20px 11px;
         & p {
             margin-top: 10px;
             font-weight: lighter;
+            font-size: 14px;
+        }
+
+        & h2{
+            font-size: 16px;
         }
     }
+}
+
+.cards-bloc{
+    margin-top: 15px;
 }
