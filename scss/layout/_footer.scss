@@ -56,10 +56,11 @@
                 display: inline-block;
                 transform: rotate(-45deg);
             }
+            & + p{
+                margin-left: 25px;
+            }
                   
         }
-        & p{
-            margin-left: 25px;
-        }
+        
     } 
 }
