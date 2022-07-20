@@ -25,7 +25,6 @@ a{
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 1200px;
         @include tablette{
             height: max-content;
         }
