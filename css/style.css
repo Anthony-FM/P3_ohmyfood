@@ -253,7 +253,8 @@ h2, h3 {
 .loader {
   position: fixed;
   width: 100%;
-  height: 100%;
+  height: 115%;
+  border-radius: 0 0 100px 100px;
   background-color: #9356dc;
   opacity: 0;
   z-index: 9999999;
@@ -265,14 +266,32 @@ h2, h3 {
   transform: scale(1, 0);
   animation: open 5000ms;
 }
+@media screen and (min-width: 768px) {
+  .loader {
+    height: 125vh;
+    border-radius: 0 0 150px 150px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .loader {
+    height: 125vh;
+    border-radius: 0 0 150px 150px;
+  }
+}
 .loader__spinner {
   width: 100px;
   height: 100px;
+  margin-bottom: 15vh;
   color: #99E2D0;
   opacity: 0;
   font-size: 100px;
   transform-origin: center center;
   animation: spin 4000ms 500ms;
+}
+@media screen and (min-width: 768px) {
+  .loader__spinner {
+    margin-bottom: 25vh;
+  }
 }
 
 @keyframes open {
@@ -305,13 +324,14 @@ h2, h3 {
     transform: rotate(1turn);
   }
   20% {
-    opacity: 0.8;
+    opacity: 1;
     transform: rotate(10turn);
   }
   55% {
     transform: rotate(35turn);
   }
   75% {
+    opacity: 1;
     transform: rotate(45turn);
   }
   90% {
