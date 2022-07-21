@@ -12,7 +12,7 @@
     align-items: center;
     transform-origin: top;
     transform: scale(1,0);
-    animation: open 5000ms;
+    animation: open 3000ms;
     @include tablette{
         height: 125vh;
         border-radius: 0 0 150px 150px;
@@ -29,7 +29,8 @@
         opacity: 0;
         font-size: 100px;
         transform-origin: center center;
-        animation: spin 4000ms 500ms;
+        animation: spin 2000ms 500ms cubic-bezier(.9,0,.1,1);
+        animation-fill-mode: forwards;
         @include tablette{
             margin-bottom: 25vh;
         }
@@ -69,31 +70,32 @@
 
     10%{     
         opacity: 0.4;   
-        transform: rotate(1turn);
+        transform: rotate(2turn);
     }
 
     20%{
         opacity: 1;
-        transform: rotate(10turn);
+        transform: rotate(15turn);
     }
 
-    55%{
-        transform: rotate(35turn);
+    45%{
+        transform: rotate(40turn);
+        animation-timing-function: cubic-bezier(.9,0,.1,1);
     }
 
     75%{
         opacity: 1;
-        transform: rotate(45turn);
+        transform: rotate(60turn);
+        animation-timing-function: cubic-bezier(.70,.3,.56,1);
     }
 
     90%{
         opacity: 0.7;
-        transform: rotate(50turn);
+        transform: rotate(95turn);
     }
 
     100%{
         opacity: 0;
-        transform: rotate(52turn);
-        
+        transform: rotate(100turn);        
     }
 }
