@@ -809,9 +809,6 @@ h2, h3 {
   color: transparent;
   -webkit-background-clip: text;
   transform-origin: bottom;
-  background-position-y: 100%;
-  background-size: 100% 200%;
-  background-origin: 0px;
   opacity: 0;
   transform: scale(1, 0);
   transition: scale 400ms, opacity 400ms ease-in-out;

@@ -23,9 +23,6 @@
         color: transparent;  // mise en transparence du texte
         -webkit-background-clip: text; // création d'un masque d'écrétage, la couleur remplacera le texte transparent    
         transform-origin: bottom;
-        background-position-y: 100%; 
-        background-size: 100% 200%;
-        background-origin:  0px;
         opacity: 0;
         transform: scale(1, 0);
         transition: scale 400ms, opacity 400ms ease-in-out;
@@ -39,7 +36,7 @@
             transform: scaleY(1);         
         }
         & > p:nth-child(1){        
-            opacity: 0;         
+            opacity: 0;   
         }
     }  
 }
