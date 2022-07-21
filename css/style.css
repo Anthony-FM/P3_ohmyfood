@@ -911,6 +911,17 @@ h2, h3 {
 
 .img-presentation {
   position: relative;
+  height: 258px;
+}
+@media screen and (min-width: 768px) {
+  .img-presentation {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .img-presentation {
+    height: 350px;
+  }
 }
 .img-presentation__img {
   width: 100%;
