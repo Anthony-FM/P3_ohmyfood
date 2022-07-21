@@ -264,7 +264,7 @@ h2, h3 {
   align-items: center;
   transform-origin: top;
   transform: scale(1, 0);
-  animation: open 5000ms;
+  animation: open 3000ms;
 }
 @media screen and (min-width: 768px) {
   .loader {
@@ -286,7 +286,8 @@ h2, h3 {
   opacity: 0;
   font-size: 100px;
   transform-origin: center center;
-  animation: spin 4000ms 500ms;
+  animation: spin 2000ms 500ms cubic-bezier(0.9, 0, 0.1, 1);
+  animation-fill-mode: forwards;
 }
 @media screen and (min-width: 768px) {
   .loader__spinner {
@@ -321,26 +322,28 @@ h2, h3 {
   }
   10% {
     opacity: 0.4;
-    transform: rotate(1turn);
+    transform: rotate(2turn);
   }
   20% {
     opacity: 1;
-    transform: rotate(10turn);
+    transform: rotate(15turn);
   }
-  55% {
-    transform: rotate(35turn);
+  45% {
+    transform: rotate(40turn);
+    animation-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
   }
   75% {
     opacity: 1;
-    transform: rotate(45turn);
+    transform: rotate(60turn);
+    animation-timing-function: cubic-bezier(0.7, 0.3, 0.56, 1);
   }
   90% {
     opacity: 0.7;
-    transform: rotate(50turn);
+    transform: rotate(95turn);
   }
   100% {
     opacity: 0;
-    transform: rotate(52turn);
+    transform: rotate(100turn);
   }
 }
 .btn {
@@ -445,11 +448,11 @@ h2, h3 {
   flex-direction: column;
   width: 100%;
   margin-bottom: 20px;
+  animation: up 1500ms both;
 }
 @media screen and (min-width: 768px) {
   .menu {
     width: 33%;
-    justify-content: space-between;
   }
 }
 @media screen and (min-width: 992px) {
@@ -472,6 +475,9 @@ h2, h3 {
   background-color: #99E2D0;
   left: 0;
   top: 21px;
+  transform-origin: left;
+  animation: right 1000ms backwards;
+  animation-delay: 5s;
 }
 .menu__cards {
   display: flex;
@@ -486,6 +492,8 @@ h2, h3 {
   box-shadow: 0 14px 50px rgba(0, 0, 0, 0.25), 0 3px 10px rgba(0, 0, 0, 0.22);
   overflow: hidden;
   cursor: pointer;
+  opacity: 1;
+  animation: apparition 1500ms backwards;
 }
 @media screen and (min-width: 768px) {
   .menu__cards {
@@ -500,6 +508,94 @@ h2, h3 {
   transform: rotate(0deg);
 }
 
+.menu--1 {
+  animation-delay: 800ms;
+}
+
+.menu--2 {
+  animation-delay: 1600ms;
+}
+
+.menu--3 {
+  animation-delay: 2400ms;
+}
+
+@keyframes up {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.menu__cards--1 {
+  animation-delay: 400ms;
+}
+
+.menu__cards--2 {
+  animation-delay: 800ms;
+}
+
+.menu__cards--3 {
+  animation-delay: 1200ms;
+}
+
+.menu__cards--4 {
+  animation-delay: 1600ms;
+}
+
+.menu__cards--5 {
+  animation-delay: 2000ms;
+}
+
+.menu__cards--6 {
+  animation-delay: 2400ms;
+}
+
+.menu__cards--7 {
+  animation-delay: 2800ms;
+}
+
+.menu__cards--8 {
+  animation-delay: 3200ms;
+}
+
+.menu__cards--9 {
+  animation-delay: 3600ms;
+}
+
+.menu__cards--10 {
+  animation-delay: 4000ms;
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(999px);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes right {
+  0% {
+    opacity: 0;
+    transform: scale(0, 1);
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
 .card-check {
   display: flex;
   align-items: flex-end;

@@ -3,13 +3,15 @@
     flex-direction: column;
     width: 100%;
     margin-bottom: 20px;
+    animation: up 1500ms both;
     @include tablette{
         width: 33%;
-        justify-content: space-between;
+        // justify-content: space-between;
     }
     @include desktop{
         width: 32%;
     }
+
     &__title {
         font-size: 18px;
         font-weight: 300;
@@ -24,6 +26,9 @@
             background-color: $color-tertiary;
             left: 0;
             top: 21px;
+            transform-origin: left;
+            animation: right 1000ms backwards;
+            animation-delay: 5s;
         }
     }
     &__cards{
@@ -39,6 +44,8 @@
         box-shadow: $shadow;
         overflow: hidden;
         cursor: pointer;
+        opacity: 1;
+        animation: apparition 1500ms backwards;
         @include tablette{
             width: 100%;
         }
@@ -50,6 +57,66 @@
                 transform: rotate(0deg);
             }
         }        
+    }
+}
+
+@for $i from 1 to 4 {
+    .menu--#{$i}{
+        animation-delay: 800ms * $i ;
+    }    
+}
+
+@keyframes up{
+    0%{
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    75%{
+        opacity: 1;
+    }
+
+    100%{
+        
+        transform: translateY(0);
+    }
+}
+
+@for $i from 1 to 11 {
+    .menu__cards--#{$i}{
+        animation-delay: 400ms * $i ;
+    }    
+}
+
+@keyframes apparition{
+    0%{
+        opacity: 0;
+        transform: translateY(999px);
+    }
+
+    75%{
+        opacity: 1;
+    }
+
+    100%{
+        
+        transform: translateY(0);
+    }
+}
+
+@keyframes right{
+    0%{
+        opacity: 0;
+        transform: scale(0,1);
+    }
+
+    75%{
+        opacity: 1;
+    }
+
+    100%{
+        
+        transform: scale(1,1);
     }
 }
 
