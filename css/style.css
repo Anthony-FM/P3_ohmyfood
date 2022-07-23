@@ -575,7 +575,7 @@ h2, h3 {
 @keyframes apparition {
   0% {
     opacity: 0;
-    transform: translateY(999px);
+    transform: translateY(80px);
   }
   75% {
     opacity: 0;
