@@ -8,7 +8,9 @@ Celui-ci proposera a ses utilisateurs
 
 les menus de restaurants gastronomiques dans leurs regions.
 
-Les objectifs de ce projet sont de réaliser un site mobile first avec des animations CSS avancées et
+Les objectifs de ce projet sont de réaliser un site mobile first avec des animations CSS avancées, 
+
+utilisation du préprocesseur Sass et
 
 l'utilisation de GitHub et de ces commits.
 
