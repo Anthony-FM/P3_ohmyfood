@@ -11,13 +11,12 @@
     align-items: center;
     box-shadow: $shadow;
     cursor: pointer;
-    font-weight: 500;       
-    transition: all 200ms ease-out;
+    font-weight: 500;  
     
     &:hover {
-              
+        // Animation des pseudoclasse      
         &::after {
-            opacity: 1;
+            opacity: 0.2;
         }
         &::before {
             opacity: 0.1;
@@ -33,7 +32,7 @@
         border-radius: 23px;
         opacity: 0;
         z-index: -1;
-        transition: opacity 250ms;
+        transition: opacity 250ms; //Animation de ::before sur l'opacité
     }
     
     &::after{
@@ -42,6 +41,6 @@
         border-radius: 23px;
         opacity: 0;
         z-index: -1;
-        transition: opacity 250ms;
+        transition: opacity 250ms; //Animation de ::after sur l'opacité
     }
 }

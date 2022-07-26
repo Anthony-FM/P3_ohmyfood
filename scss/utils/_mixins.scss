@@ -1,3 +1,4 @@
+/* Responsive */
 @mixin tablette {
     @media screen and (min-width: 768px) {
         @content;
@@ -10,6 +11,7 @@
     }
 }
 
+/* Pseudoclasse after*/
 @mixin after{
     content: '';
     position: absolute;

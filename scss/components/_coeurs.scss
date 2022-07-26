@@ -10,7 +10,7 @@
     & p:nth-child(1){
         position: absolute;
         opacity: 1;
-        transition: opacity 400ms;
+        transition: opacity 400ms; // Animation du premier couer sur son opacity
         z-index: 1;
         font-size: 25px;
 
@@ -25,16 +25,20 @@
         transform-origin: bottom;
         opacity: 0;
         transform: scale(1, 0);
-        transition: scale 400ms, opacity 400ms ease-in-out;
+        transition: scale 400ms, opacity 400ms ease-in-out; //Animation du second coeur sur son scale et son opacity en ease-in-out
         z-index: 0;
         font-size: 25px;
         
     } 
+
+    // Animation des deux coeurs
     &:hover{
+        // Apparition du second coeur
         & > p:nth-child(2){        
             opacity: 1;
             transform: scaleY(1);         
         }
+        // Disparition du premier coeur
         & > p:nth-child(1){        
             opacity: 0;   
         }

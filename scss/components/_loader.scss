@@ -1,6 +1,6 @@
 .loader{
     position: fixed;
-    width: 100vw;
+    width: 100vw; // Utilisation des unités vh et vw pour que le loader soit le même sur tous les viewports de chaque écran
     height: 115vh;
     border-radius: 0 0 100px 100px;
     background-color: lighten($color-primary, 0%);
@@ -10,9 +10,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform-origin: top;
-    transform: scale(1,0);
-    animation: open 3000ms;
+    transform-origin: top; // Transform de l'origin sur top pour que l'animation s'ouvre et se referme par le haut
+    transform: scale(1,0); // Début de l'animation sur toute la largeur de 1 et 0 en hauteur
+    animation: open 3000ms; // Animation du loader avec le @keyframes 'open'
     @include tablette{
         height: 125vh;
         border-radius: 0 0 150px 150px;
@@ -26,18 +26,18 @@
         height: 100px;
         margin-bottom: 15vh;
         color: $color-tertiary;
-        opacity: 0;
+        opacity: 0; // Début de l'animation invisible
         font-size: 100px;
         transform-origin: center center;
-        animation: spin 2000ms 500ms cubic-bezier(.9,0,.1,1);
-        animation-fill-mode: forwards;
+        animation: spin 2000ms 500ms cubic-bezier(.9,0,.1,1); //Animation du spinner avec le @keyframes 'spin' avec un delai sur l'animation du loader
+        animation-fill-mode: forwards; // Utilisation de forward pour que l'animation reste sur sa continuité
         @include tablette{
             margin-bottom: 25vh;
         }
     }
 }
-
-@keyframes open{
+/****** Keyframes ******/
+@keyframes open{ // LOADER
     0%{
         opacity: 0.2;
         transform: scaleY(1);
@@ -62,7 +62,7 @@
     }
 }
 
-@keyframes spin{
+@keyframes spin{ // SPINNER
     0%{
         opacity: 0;
         transform: rotate(0);               

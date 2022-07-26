@@ -26,8 +26,8 @@
             background-color: $color-tertiary;
             left: 0;
             top: 21px;
-            transform-origin: left;
-            animation: right 1000ms backwards;
+            transform-origin: left; // Transform de l'origine de ::after de 0 sur l'axe des abscisses X sur sa gauche
+            animation: right 1000ms backwards; //Animation du soulignage des titres "Entrée" "Plat" "Dessert" via @keyframes rigth
             animation-delay: 5s;
         }
     }
@@ -45,26 +45,35 @@
         overflow: hidden;
         cursor: pointer;
         opacity: 1;
-        animation: apparition 1500ms backwards;
+        animation: apparition 1500ms backwards; // Animation des cartes du menu grâce au @keyframes 'apparition'
         @include tablette{
             width: 100%;
         }
         
-        &:hover .card-check__check{
-            transform: scaleX(1);
+        &:hover .card-check__check{ //Animation au survol du bloc check 
+            transform: scaleX(1); // Aggrandissement du bloc vers la gauche
             width: 58px;
             & i{
-                transform: rotate(0deg);
+                transform: rotate(0deg); // Rotation de 180°
             }
         }        
     }
 }
+/******Boucles FOR******/ // Utilisation d'une boucle for pour gagner du temps sur l'écriture du code
 
-@for $i from 1 to 4 {
-    .menu--#{$i}{
-        animation-delay: 800ms * $i ;
+@for $i from 1 to 4 { 
+    .menu--#{$i}{ // Pour chaque modificateur ".menu-- + numéro d'indentation $i"
+        animation-delay: 800ms * $i ; // ajout d'un delai d'apparition en le multipliant par son numéro d'indentation = apparition les uns à la suite des autres
     }    
 }
+
+@for $i from 1 to 11 {
+    .menu__cards--#{$i}{// Pour chaque modificateur ".menu__card-- + numéro d'indentation $i"
+        animation-delay: 400ms * $i ;  // ajout d'un delai d'apparition en le multipliant par son numéro d'indentation = apparition les uns à la suite des autres
+    }    
+}
+
+/******@KEYFRAMES*****/ // Elles permettent de créer des animations fluides qui peuvent changer de rythmes selon son %
 
 @keyframes up{
     0%{
@@ -80,12 +89,6 @@
         
         transform: translateY(0);
     }
-}
-
-@for $i from 1 to 11 {
-    .menu__cards--#{$i}{
-        animation-delay: 400ms * $i ;
-    }    
 }
 
 @keyframes apparition{
@@ -142,11 +145,11 @@
         align-items: center;
         transform-origin: right;
         transform: scale(0, 1); 
-        transition: transform 600ms cubic-bezier(.56,.41,.5,1), width 600ms;
+        transition: transform 600ms cubic-bezier(.56,.41,.5,1), width 600ms; //Animation du bloc check via une transition de transform et de width
         & i{
             font-size: 1.5rem;
-            transform: rotate(-180deg);
-            transition: transform 400ms cubic-bezier(.56,.41,.5,1) 200ms;
+            transform: rotate(-180deg); // Rotation à -180° de l'icône
+            transition: transform 400ms cubic-bezier(.56,.41,.5,1) 200ms; //Animation de l'icone check grâce à une rotation via transform
         }      
     }
 }

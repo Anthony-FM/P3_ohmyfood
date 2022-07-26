@@ -31,20 +31,20 @@
             z-index: -1;
             border-radius: 25px;            
             background-color: $color-ftnt-fond;
-            opacity: 0;
-            transition: opacity 300ms;
+            opacity: 0; // Début de l'animation, le bloc n'est pas visible
+            transition: opacity 300ms; // Animation sur l'opacity pour qu'il apparaisse sur 300ms
         }  
         @include tablette{
             width: 350px;
             height: 85px;
         }
-        &:hover{
+        &:hover{ // Animation pendant le survol
             &::after{
-                opacity: 1;
+                opacity: 1; // Apparition de la couleur du bloc
             }            
             & p:nth-child(2){
                 & i:nth-child(2){
-                    opacity: 1;
+                    opacity: 1; // Apparition du second icone de couleur
                 }
             } 
         }   
@@ -59,8 +59,8 @@
                 left: 0;
                 color: $color-primary;
                 z-index: 2;       
-                opacity: 0;
-                transition: opacity 300ms;   
+                opacity: 0; // Début de l'animation, le bloc n'est pas visible
+                transition: opacity 300ms;  // Animation sur l'opacity pour qu'il apparaisse sur 300ms 
             }            
         }
 
