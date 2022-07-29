@@ -3,7 +3,7 @@
     height: 50px;
     position: relative;
     z-index: 1;
-    background: linear-gradient(to top left, $color-primary, $color-secondary 270%);
+    background: linear-gradient(to top left, $color-primary 7%, $color-secondary);
     border-radius: 23px;
     color: $color-white;
     display: flex;
